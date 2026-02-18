@@ -35,3 +35,14 @@ Building a responsive markdown editor
         >Since CSS is built for styling it is easier because it wouldn't require extra scripting.
     4. What happens if media query is placed before base styles?
         >The base style may override it, so the media query may not work as expected.
+
+# Milestone 3 Quiz
+    1. What is the difference between data and computed in Vue?
+        >data stores reactive values
+        >computed calculates values based on data
+    2. Why should we not manipulate DOM manually in Vue?
+        >Vue automatically updates the DOM for us.
+    3. What does v-html do?
+        >It renders HTML inside an element instead of plain text
+    4. Why must we strip HTML before counting characters?
+        >Because HTML tags would be counted as characters which would not be accurate if we want the count of our actual content.
