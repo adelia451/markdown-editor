@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Markdown Editor</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> <!--Bootstrap 5.3 (latest)-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">  <!--Bootstrap 5.3 (latest)-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />      <!--I want to try using the new google symbols, specifically the rounded style-->
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="p-0 m-0"> <!--from bootstrap padding and margin-->
+<body class="p-0 m-0"> <!--from bootstrap padding and margin from teacher-->
     <div id="app" class="editor-container">
-        <textarea id="input" placeholder="Type here..." v-model="message"></textarea>
-        <div id="output" v-html="htmlOutput"></div>
+        <textarea id="input" placeholder="Type here..." v-model="message"></textarea>   <!--v-model connects an input field to a variable-->
+        <div id="output" v-html="htmlOutput"></div>     <!--renders html from a variable-->
         <div id="counter" v-html="charCount"></div>
-        <span id="themeToggle" class="material-icons"> light mode </span>
+        <span id="themeToggle" class="material-symbols-rounded" v-on:click="toggleTheme"> {{themeIcon}} </span>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

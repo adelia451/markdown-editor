@@ -4,21 +4,23 @@ body {
     margin: 0;
 }
 
+/* Mobile (<768px) */
 .editor-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* stacked vertically */
     position: relative;
-    height: 100%
+    height: 100% /*telling text editor to be as tall as the page - without this flex: 1 wouldn't work because the parent would not have a defined height*/
 }
 
+/* Flex items */
 #input,
 #output{
-    flex: 1;
+    flex: 1; /* both input and output grow eually to fill the container*/
     outline: none;
-    border: none;
+    border: none; /* removes default textarea/element borders*/
     resize: none;
-    padding: 1rem;
-    overflow: auto;
+    padding: 1rem;  
+    overflow: auto; /* if content is bigger than the box, scrollbar appears */
 }
 
 #input:focus {
@@ -26,27 +28,31 @@ body {
     box-shadow: none;
 }
 
+
+/* Mobile (<768px) */
 @media (max-width: 768px) {
     #input {
-        border-bottom: 2px solid #ccc;
+        border-bottom: 2px solid #ccc; /* adds horizontal border */
     }
 }
 
+/* Desktop (>=768px) */
 @media (min-width: 768px) {
     .editor-container {
        flex-direction: row;
     }
 
     #input {
-        border-right: 2px solid #ccc;
+        border-right: 2px solid #ccc; /* adds vertical border */
     }
 }
 
+/* Absolute positioning of theme toggle and counter */
 #themeToggle {
-    position: absolute;
-    top: 10px;
+    position: absolute; /*this position so it can be placed anywhere and ignores the order of other elements*/
+    top: 10px; /*top down*/
     right: 10px;
-    cursor: pointer;
+    cursor: pointer;  /* hand cursor on hover*/
     z-index: 1000;
 }
 
@@ -56,8 +62,8 @@ body {
     right: 10px;
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.5rem; /*height then width*/
     font-size: 0.9rem;
-    border-radius: 0.25rem;
+    border-radius: 0.25rem; /*makes it rounded*/
     z-index: 1000;
 }
