@@ -16,7 +16,8 @@ Building a responsive markdown editor
 - Responsive (stacked mobile / split desktop)
 
 ## AI Prompts I Used
-- Why does flex: 1 make children eual size in a flex container, and what does "equal size" actually mean?
+- What is the difference between v-model and v-html.
+- Why does flex: 1 make children equal size in a flex container, and what does "equal size" actually mean?
 - Why do we need height: 100% on the parent container so that flex: 1 workds on children?
 - I previsouly restored and updated input using manual JS with addEventListener and direct DOM updates; now I have to use mounted() and watch in Vue. What's the difference? 
     - (After figuring out this part) Can you make a diagram of the equivalent parts between the two approaches? 
@@ -63,3 +64,11 @@ Building a responsive markdown editor
         >A Vue watcher watches a value and automatically runs code when it changes, like saving text or theme to localStorage.
     4. Why should theme state also be persisted?
         >So the site remembers the user’s theme and shows it the same way when they come back.
+
+# Final Reflection Quiz
+    1. How did you utilise AI to help you code the app, show some examples.
+        > I used AI to help me understand concepts I was confused about. For example, I asked questions about using flex and Vue. I also used it to understand differences between Vue.js and JavaScript Dom manipulation. I asked about differences between v-model and v-html as well. I think asking about differences between things helps me understand them better because I have something else to compare it to.
+    2. What part ofthe build was most challanging?
+        >For me, the most challenging part was understanding how Vue handles reactivity compared to manual JavaScript DOM. I had just gotten used to getElementID/addEventListener, so switching to mounted() and watch required me readjust my thinking. 
+    3. What is the benefit of using a framework such as Vue for forntend development
+        >Using Vue is helpful because it automatially keeps the data and the page in sync. Instead of manually updating the DOM, you update the data and Vue handles the rest. It makes the code more organized and easier to manage.
