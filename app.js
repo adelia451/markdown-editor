@@ -12,7 +12,13 @@ const app = Vue.createApp({
         },
 
         charCount() {
-            return (this.htmlOutput.replace(/<[^>]*>/g, '')).length;
+            //convert markdown to HTML
+            const html = marked.parse(this.message);
+            //strip html tags
+            const text = html.replace(/<[^>]*>/g, '');
+            //return this.message.replace(/<[^>]*>/g, '').length;
+            // return (this.htmlOutput.replace(/<[^>]*>/g, '').trim()).length;
+            return text.trim().length;
         },
 
         themeIcon() {

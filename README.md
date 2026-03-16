@@ -19,7 +19,7 @@ Building a responsive markdown editor
 - What is the difference between v-model and v-html.
 - Why does flex: 1 make children equal size in a flex container, and what does "equal size" actually mean?
 - Why do we need height: 100% on the parent container so that flex: 1 workds on children?
-- I previsouly restored and updated input using manual JS with addEventListener and direct DOM updates; now I have to use mounted() and watch in Vue. What's the difference? 
+- I previsouly restored and updated input using manual JS with addEventListener and direct DOM updates; now I have to use mounted() and  watch in Vue. What's the difference? 
     - (After figuring out this part) Can you make a diagram of the equivalent parts between the two approaches? 
 - How does a click event work in Vue.js?
 
