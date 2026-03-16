@@ -12,12 +12,8 @@ const app = Vue.createApp({
         },
 
         charCount() {
-            //convert markdown to HTML
-            const html = marked.parse(this.message);
-            //strip html tags
-            const text = html.replace(/<[^>]*>/g, '');
-            //return this.message.replace(/<[^>]*>/g, '').length;
-            // return (this.htmlOutput.replace(/<[^>]*>/g, '').trim()).length;
+            const html = marked.parse(this.message); //convert markdown to HTML
+            const text = html.replace(/<[^>]*>/g, ''); //strip html tags
             return text.trim().length;
         },
 

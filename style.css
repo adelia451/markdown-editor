@@ -21,7 +21,7 @@ body {
     min-width: 0; /*prevents flex children from overflowing*/
 }
 
-/* Flex Items */
+/* Flex Items - text areas and output */
 #input,
 #output
     {
@@ -31,7 +31,7 @@ body {
     border: none; /* removes default textarea/element borders*/
     outline: none;
     resize: none; 
-    overflow: auto; /* if content is bigger than the box, scrollbar appears */
+    overflow: auto; /*if content is bigger than the box, scrollbar appears*/
     overflow-wrap: break-word; /*breaks word onto next line*/
     word-wrap: break-word; /*same ^*/
     white-space: pre-wrap; /*preserves newlines and spaces but still wraps text*/
@@ -70,19 +70,12 @@ body {
 /* QUERIES */
 /* Mobile (<768px) */
 @media (max-width: 768px) {
-    #input {
-        border-bottom: 2px solid #ccc; /* adds horizontal border */
-    }
+   #input { border-bottom: 2px solid #ccc; /* adds horizontal border */ }
 }
 
 /* Desktop (>=768px) */
 @media (min-width: 768px) {
-    .editor-container {
-       flex-direction: row;
-    }
-
-    #input {
-        border-right: 2px solid #ccc; /* adds vertical border */
-    }
+    .editor-container { flex-direction: row; }
+    #input { border-right: 2px solid #ccc;}
 }
 
